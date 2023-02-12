@@ -87,7 +87,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     itemBuilder: (context, index) => InkWell(
                       onTap: () => _onInformativeItemTapped(index),
                       child: SizedBox(
-                        width: MediaQuery.of(context).size.width / 3.3,
+                        width: MediaQuery.of(context).size.width / 3.4,
                         child: InformativeCards(
                           informationValue:
                               ProfilePage.informativeItemsValues[index],
