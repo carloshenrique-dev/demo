@@ -1,5 +1,6 @@
 import 'package:demo/core/ui/colors.dart';
 import 'package:demo/core/ui/widgets/bottom_navigation_bar.dart';
+import 'package:demo/core/ui/widgets/default_space.dart';
 import 'package:demo/modules/user/profile/widgets/common_cards.dart';
 import 'package:demo/modules/user/profile/widgets/informative_cards.dart';
 import 'package:demo/modules/user/profile/widgets/pause_feed_card.dart';
@@ -66,16 +67,12 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  height: 20,
-                ),
+                const DefaultSpace(),
                 const UserContainer(
                   userName: 'Carlos Henrique',
                   userDetail: 'Mobile Software Developer',
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const DefaultSpace(),
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
                   height: 120,
@@ -101,13 +98,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const DefaultSpace(),
                 const PauseFeedCard(),
-                const SizedBox(
-                  height: 20,
-                ),
+                const DefaultSpace(),
                 SizedBox(
                   height: 285,
                   child: ListView.separated(
@@ -123,9 +116,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
+                const DefaultSpace(),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(

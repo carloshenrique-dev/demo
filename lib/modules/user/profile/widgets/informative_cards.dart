@@ -1,4 +1,5 @@
 import 'package:demo/core/ui/colors.dart';
+import 'package:demo/core/ui/widgets/default_space.dart';
 import 'package:flutter/material.dart';
 
 class InformativeCards extends StatelessWidget {
@@ -34,9 +35,7 @@ class InformativeCards extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          const DefaultSpace(),
           Text(
             description,
             style: const TextStyle(
