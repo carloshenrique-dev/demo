@@ -74,8 +74,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const DefaultSpace(),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 120,
+                  height: MediaQuery.of(context).size.height * 0.15,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
@@ -101,19 +100,16 @@ class _ProfilePageState extends State<ProfilePage> {
                 const DefaultSpace(),
                 const PauseFeedCard(),
                 const DefaultSpace(),
-                SizedBox(
-                  height: 285,
-                  child: ListView.separated(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: ProfilePage.menuItems.length,
-                    itemBuilder: (context, index) => CommonCards(
-                      icon: ProfilePage.menuIcons[index],
-                      text: ProfilePage.menuItems[index],
-                    ),
-                    separatorBuilder: (context, index) => const SizedBox(
-                      height: 10,
-                    ),
+                ListView.separated(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: ProfilePage.menuItems.length,
+                  itemBuilder: (context, index) => CommonCards(
+                    icon: ProfilePage.menuIcons[index],
+                    text: ProfilePage.menuItems[index],
+                  ),
+                  separatorBuilder: (context, index) => const SizedBox(
+                    height: 10,
                   ),
                 ),
                 const DefaultSpace(),
