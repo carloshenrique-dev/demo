@@ -76,10 +76,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(
                   height: 20,
                 ),
-                ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    maxHeight: 130,
-                  ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: 120,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
@@ -87,11 +86,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     itemCount: ProfilePage.informativeItems.length,
                     itemBuilder: (context, index) => InkWell(
                       onTap: () => _onInformativeItemTapped(index),
-                      child: InformativeCards(
-                        informationValue:
-                            ProfilePage.informativeItemsValues[index],
-                        description: ProfilePage.informativeItems[index],
-                        isSelected: informativeCurrentIndex == index,
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 3.3,
+                        child: InformativeCards(
+                          informationValue:
+                              ProfilePage.informativeItemsValues[index],
+                          description: ProfilePage.informativeItems[index],
+                          isSelected: informativeCurrentIndex == index,
+                        ),
                       ),
                     ),
                     separatorBuilder: (context, index) => const SizedBox(

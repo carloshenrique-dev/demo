@@ -17,8 +17,6 @@ class InformativeCards extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-      height: 50,
-      width: 112,
       decoration: BoxDecoration(
         color: isSelected ? AppColors.green : AppColors.grey,
         borderRadius: const BorderRadius.all(
